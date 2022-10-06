@@ -1,0 +1,24 @@
+def pedirBase():
+    X = int(input('Digite el número	base: '))
+    return X
+
+def pedirExponente():
+    Y = int(input('Digite el número exponente: '))
+    return Y
+
+def calcularExponente(X,Y):
+    if Y <= 0:
+        return 1
+    else: 
+        return X * calcularExponente(X, Y-1)
+
+try:   
+    X = pedirBase()
+    Y = pedirExponente()
+    result = calcularExponente(X, Y)
+    print(f'El resultado es: {result}')
+except ValueError: 
+    print('Colocaste caracter en lugar de número, prueba colocando números')
+
+
+
